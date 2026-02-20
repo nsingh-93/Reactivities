@@ -1,0 +1,15 @@
+C:\Users\neils\Desktop\Code\Reactivities\Persistance\bin\Debug\net10.0\Persistance.deps.json
+C:\Users\neils\Desktop\Code\Reactivities\Persistance\bin\Debug\net10.0\Persistance.dll
+C:\Users\neils\Desktop\Code\Reactivities\Persistance\bin\Debug\net10.0\Persistance.pdb
+C:\Users\neils\Desktop\Code\Reactivities\Persistance\bin\Debug\net10.0\Domain.dll
+C:\Users\neils\Desktop\Code\Reactivities\Persistance\bin\Debug\net10.0\Domain.pdb
+C:\Users\neils\Desktop\Code\Reactivities\Persistance\obj\Debug\net10.0\Persistance.csproj.AssemblyReference.cache
+C:\Users\neils\Desktop\Code\Reactivities\Persistance\obj\Debug\net10.0\Persistance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neils\Desktop\Code\Reactivities\Persistance\obj\Debug\net10.0\Persistance.AssemblyInfoInputs.cache
+C:\Users\neils\Desktop\Code\Reactivities\Persistance\obj\Debug\net10.0\Persistance.AssemblyInfo.cs
+C:\Users\neils\Desktop\Code\Reactivities\Persistance\obj\Debug\net10.0\Persistance.csproj.CoreCompileInputs.cache
+C:\Users\neils\Desktop\Code\Reactivities\Persistance\obj\Debug\net10.0\Persista.3F568332.Up2Date
+C:\Users\neils\Desktop\Code\Reactivities\Persistance\obj\Debug\net10.0\Persistance.dll
+C:\Users\neils\Desktop\Code\Reactivities\Persistance\obj\Debug\net10.0\refint\Persistance.dll
+C:\Users\neils\Desktop\Code\Reactivities\Persistance\obj\Debug\net10.0\Persistance.pdb
+C:\Users\neils\Desktop\Code\Reactivities\Persistance\obj\Debug\net10.0\ref\Persistance.dll
