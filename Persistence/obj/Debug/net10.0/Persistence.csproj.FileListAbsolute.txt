@@ -13,3 +13,4 @@ C:\Users\neils\Desktop\Code\Reactivities\Persistence\obj\Debug\net10.0\Persisten
 C:\Users\neils\Desktop\Code\Reactivities\Persistence\obj\Debug\net10.0\refint\Persistence.dll
 C:\Users\neils\Desktop\Code\Reactivities\Persistence\obj\Debug\net10.0\Persistence.pdb
 C:\Users\neils\Desktop\Code\Reactivities\Persistence\obj\Debug\net10.0\ref\Persistence.dll
+C:\Users\neils\Desktop\Code\Reactivities\Persistence\obj\Debug\net10.0\Persistence.sourcelink.json
