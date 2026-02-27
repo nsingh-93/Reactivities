@@ -1,0 +1,15 @@
+meta {
+  name: Get Activity
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url}}/api/activities/1efc8d48-6b9e-413f-b803-125b0c925a19
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  url: https://localhost:5001
+}
