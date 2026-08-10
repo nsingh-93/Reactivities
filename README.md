@@ -18,3 +18,9 @@
 - To apply the migration, run the following in the terminal
     - ```dotnet ef database update -p Persistence -s API```
         - The -p and -s flags are the same as when creating the migration
+
+### Running the React project
+- Open a terminal and cd into the client project folder (this is the React project)
+- In the terminal, run the following
+    - ```npm run dev```
+        - The output in the terminal will show which port it is running on

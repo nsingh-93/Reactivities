@@ -29,6 +29,8 @@ var services = scope.ServiceProvider;
 
 try
 {
+    // This block creates a database if there isn't one
+    // and takes care of pending migrations and seeding data
     var context = services.GetRequiredService<AppDbContext>();
     await context.Database.MigrateAsync();
     await DbInitializer.SeedData(context);
