@@ -1,3 +1,8 @@
+// Can easily make types using JsonToTs tool online
+// Just get json response from api call and paste
+// that into the tool and copy outpout to here for type
+
+// interface IActivity = {
 type Activity = {
   id: string;
   title: string;
@@ -9,4 +14,4 @@ type Activity = {
   venue: string;
   latitude: number;
   longitude: number;
-}
+};

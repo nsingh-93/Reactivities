@@ -6,6 +6,11 @@ function App() {
   const [activities, setActivities] = useState<Activity[]>([]);
 
   useEffect(() => {
+    // fetch('https://localhost:5001/api/activities')
+    //   .then(response => response.json)
+    //   .then(data => setActivities(data))
+    // The previous is native js function to get data
+
     axios.get<Activity[]>('https://localhost:5001/api/activities')
       .then(response => setActivities(response.data))
 
@@ -13,6 +18,7 @@ function App() {
   }, [])
 
   return (
+    // <> is shorthand for <Fragment>
     <>
       <Typography variant="h3">Reactivities</Typography>
       <List>
