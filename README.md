@@ -8,6 +8,9 @@
     > ```dotnet dev-certs https --clear```\
     > ```dotnet dev-certs https --trust```
 
+- Can also use the following to keep the API running and have it hot reload when changes are made
+    - ```dotnet watch```
+
 ### Creating and Applying EF Migration
 - Open the terminal and cd to the solution folder (Reactivities)
 - In the terminal, run the following
