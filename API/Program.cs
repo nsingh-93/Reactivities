@@ -13,9 +13,12 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 builder.Services.AddCors();
-builder.Services.AddMediatR(x => 
-    x.RegisterServicesFromAssemblyContaining<GetActivityList.Handler>());
-builder.Services.AddAutoMapper(cfg => {}, typeof(MappingProfiles).Assembly);
+builder.Services.AddMediatR(x =>
+{
+    x.LicenseKey = "eyJhbGciOiJSUzI1NiIsImtpZCI6Ikx1Y2t5UGVubnlTb2Z0d2FyZUxpY2Vuc2VLZXkvYmJiMTNhY2I1OTkwNGQ4OWI0Y2IxYzg1ZjA4OGNjZjkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2x1Y2t5cGVubnlzb2Z0d2FyZS5jb20iLCJhdWQiOiJMdWNreVBlbm55U29mdHdhcmUiLCJleHAiOiIxODE4MDI4ODAwIiwiaWF0IjoiMTc4NjU2ODMyNSIsImFjY291bnRfaWQiOiIwMTlmZjdjMmFjYTA3Y2U1ODJiNTA4YTMwMTA1Zjc2NSIsImN1c3RvbWVyX2lkIjoiMDE5ZmY3YzJhY2EwN2NlNTgyYjUwOGEzMDEwNWY3NjUiLCJzdWJfaWQiOiItIiwiZWRpdGlvbiI6IjAiLCJ0eXBlIjoiMiJ9.X0sUzxRo0VAFQIsKwjvBLaz1x89TJ_nfplgVExSHnmXqMQGQUrKP0q2i-GW_3_IRBSr_9IsaXuhoGBEDcG3Lba0CuiWjUnA2jcAvgsooIcFE0gXWnq0gOf3ueJHRDribQFzsS8T6iIBhEAMSFx_CJFL43_5iiDaN5o-Ik4nVeIJ7lrcRcPZF9xOhVLmPQGKvHXWdgktZ0huZF3R9oof5Nq2f4yQ6M25FiTlkKZtp42vwfUElcm7x-RmqEKhTeUiA94JdzVAdCQUy8YLImY4JHwf2xEUDHGEHMq9PHIPFJ7l9ohZ7iz9imBsfMZhK3BFBiQrlwChB1DiGWq2bOugXyA";
+    x.RegisterServicesFromAssemblyContaining<GetActivityList.Handler>();
+});
+builder.Services.AddAutoMapper(cfg => { }, typeof(MappingProfiles).Assembly);
 
 var app = builder.Build();
 
