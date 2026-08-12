@@ -11,6 +11,6 @@ namespace API.Controllers
 
         protected IMediator Mediator => 
             _mediator ??= HttpContext.RequestServices.GetService<IMediator>()
-                ?? throw new InvalidOperationException("Imediator service is unavailable");
+                ?? throw new InvalidOperationException("IMediator service is unavailable");
     }
 }
