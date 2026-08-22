@@ -46,26 +46,6 @@ function App() {
     setEditMode(false);
   };
 
-  const handleSubmitForm = (activity: Activity) => {
-    // if (activity.id) {
-    //   setSelectedActivity(activity);
-    //   setActivities(
-    //     activities.map((x) => (x.id === activity.id ? activity : x)),
-    //   );
-    // } else {
-    //   const newActivity = { ...activity, id: activities.length.toString() };
-    //   setSelectedActivity(newActivity);
-    //   setActivities([...activities, newActivity]);
-    // }
-    console.log(activity);
-    setEditMode(false);
-  };
-
-  const handleDelete = (id: string) => {
-    // setActivities(activities.filter((x) => x.id !== id));
-    console.log(id);
-  };
-
   return (
     // <> is shorthand for <Fragment>
     <Box sx={{ bgcolor: "#eeeeee", minHeight: "100vh" }}>
@@ -83,8 +63,6 @@ function App() {
             editMode={editMode}
             openForm={handleOpenForm}
             closeForm={handleFormClose}
-            submitForm={handleSubmitForm}
-            deleteActivity={handleDelete}
           />
         )}
       </Container>
