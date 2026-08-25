@@ -34,7 +34,7 @@ export default function ActivityDetail() {
       <CardActions>
         <Button
           component={Link}
-          to={`/activities/${activity.id}`} // Change this to route to form for edit
+          to={`/manage/${activity.id}`}
           color="primary"
         >
           Edit
