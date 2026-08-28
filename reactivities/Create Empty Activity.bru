@@ -1,0 +1,28 @@
+meta {
+  name: Create Empty Activity
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{url}}/api/activities
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {}
+}
+
+vars:pre-request {
+  url: https://localhost:5001
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
