@@ -1,17 +1,23 @@
 meta {
-  name: Create Empty Activity
+  name: Edit Activity Missing Fields
   type: http
-  seq: 7
+  seq: 1
 }
 
-post {
+put {
   url: {{url}}/api/activities
   body: json
   auth: inherit
 }
 
+headers {
+  Content-Type: application/json
+}
+
 body:json {
-  {}
+  {
+    "title": ""
+  }
 }
 
 vars:pre-request {
@@ -21,5 +27,4 @@ vars:pre-request {
 settings {
   encodeUrl: true
   timeout: 0
-  forwardAuthorizationHeader: false
 }
