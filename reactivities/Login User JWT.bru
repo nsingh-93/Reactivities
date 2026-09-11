@@ -1,0 +1,31 @@
+meta {
+  name: Login User JWT
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{url}}/api/login
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "bob@test.com",
+    "password": "Pa$$w0rd"
+  }
+}
+
+vars:pre-request {
+  url: https://localhost:5001
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
