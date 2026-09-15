@@ -34,4 +34,4 @@
     - There needs to be an extra post response script added to the login with JWT to make it work
         - ```bru.setVar("accessToken", res.body.accessToken);```
     - Then in the collection, the authorization needs to be set to Bearer and then {{accessToken}} will be the token
-    - When using the login with cookie = true, then any requests that need the cookie need to have their specific request auth set to no authfor it to work
+    - When using the login with cookie = true, then any requests that need the cookie need to have their specific request auth set to "no auth" for it to work
