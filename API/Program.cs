@@ -46,6 +46,7 @@ var app = builder.Build();
 // Order for middleware is important
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod()
+    .AllowCredentials()
     .WithOrigins("http://localhost:3000", "https://localhost:3000"));
 
 app.UseAuthentication();

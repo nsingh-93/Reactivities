@@ -1,11 +1,11 @@
 meta {
-  name: Login User JWT
+  name: Register User Successful
   type: http
-  seq: 9
+  seq: 10
 }
 
 post {
-  url: {{url}}/api/login
+  url: {{url}}/api/account/register
   body: json
   auth: inherit
 }
@@ -16,16 +16,14 @@ headers {
 
 body:json {
   {
-    "email": "bob@test.com",
+    "email": "jim@test.com",
+    "displayName": "James",
     "password": "Pa$$w0rd"
   }
-}
-
-script:post-response {
-  bru.setVar("accessToken", res.body.accessToken);
 }
 
 settings {
   encodeUrl: true
   timeout: 0
+  forwardAuthorizationHeader: false
 }

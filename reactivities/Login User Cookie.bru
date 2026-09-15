@@ -1,0 +1,28 @@
+meta {
+  name: Login User Cookie
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{url}}/api/login?useCookies=true
+  body: json
+  auth: inherit
+}
+
+params:query {
+  useCookies: true
+}
+
+body:json {
+  {
+    "email": "jim@test.com",
+    "password": "Pa$$w0rd"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}

@@ -1,17 +1,20 @@
 meta {
-  name: Create Empty Activity
+  name: Register User Validation Error
   type: http
-  seq: 7
+  seq: 12
 }
 
 post {
-  url: {{url}}/api/activities
+  url: {{url}}/api/account/register
   body: json
   auth: inherit
 }
 
 body:json {
-  {}
+  {
+    "email": "sally@test.com",
+    "password": "Pa$$w0rd"
+  }
 }
 
 settings {
