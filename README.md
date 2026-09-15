@@ -27,3 +27,11 @@
 - In the terminal, run the following
     - ```npm run dev```
         - The output in the terminal will show which port it is running on
+
+
+### Notes on Bruno for Identity
+- Using Bruno, the JWT does not save as a cookie automatically as it does in the course
+    - There needs to be an extra post response script added to the login with JWT to make it work
+        - ```bru.setVar("accessToken", res.body.accessToken);```
+    - Then in the collection, the authorization needs to be set to Bearer and then {{accessToken}} will be the token
+    - When using the login with cookie = true, then any requests that need the cookie need to have their specific request auth set to no authfor it to work
