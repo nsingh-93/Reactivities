@@ -25,6 +25,10 @@ vars:pre-request {
   url: https://localhost:5001
 }
 
+script:post-response {
+  bru.setVar("accessToken", res.body.accessToken);
+}
+
 settings {
   encodeUrl: true
   timeout: 0
