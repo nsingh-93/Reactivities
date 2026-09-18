@@ -16,12 +16,13 @@ public class AccountController(SignInManager<User> signInManager) : BaseApiContr
         {
             UserName = registerDto.Email,
             Email = registerDto.Email,
-            DisplayName = registerDto.DisplayName
+            DisplayName = registerDto.DisplayName,
         };
 
         var result = await signInManager.UserManager.CreateAsync(user, registerDto.Password);
 
-        if (result.Succeeded) return Ok();
+        if (result.Succeeded)
+            return Ok();
 
         foreach (var error in result.Errors)
         {
@@ -35,21 +36,24 @@ public class AccountController(SignInManager<User> signInManager) : BaseApiContr
     [HttpGet("user-info")]
     public async Task<ActionResult> GetUserInfo()
     {
-        if (User.Identity?.IsAuthenticated == false) return NoContent();
+        if (User.Identity?.IsAuthenticated == false)
+            return NoContent();
 
         var user = await signInManager.UserManager.GetUserAsync(User);
 
-        if (user == null) return Unauthorized();
+        if (user == null)
+            return Unauthorized();
 
-        return Ok(new
-        {
-            user.DisplayName,
-            user.Email,
-            user.Id,
-            user.ImageUrl
-        });
+        return Ok(
+            new
+            {
+                user.DisplayName,
+                user.Email,
+                user.Id,
+                user.ImageUrl,
+            }
+        );
     }
-
 
     [HttpPost("logout")]
     public async Task<ActionResult> Logout()

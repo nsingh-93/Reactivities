@@ -34,13 +34,15 @@ public class ExceptionMiddleware(ILogger<ExceptionMiddleware> logger, IHostEnvir
             ? new AppException(context.Response.StatusCode, ex.Message, ex.StackTrace)
             : new AppException(context.Response.StatusCode, ex.Message, null);
 
-        var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+        var options = new JsonSerializerOptions
+        {
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        };
 
         var json = JsonSerializer.Serialize(response, options);
 
         await context.Response.WriteAsync(json);
     }
-
 
     private static async Task HandleValidationException(HttpContext context, ValidationException ex)
     {
@@ -68,7 +70,7 @@ public class ExceptionMiddleware(ILogger<ExceptionMiddleware> logger, IHostEnvir
             Status = StatusCodes.Status400BadRequest,
             Type = "ValidationFailure",
             Title = "Validation error",
-            Detail = "One or more validation errors has occurred"
+            Detail = "One or more validation errors has occurred",
         };
 
         await context.Response.WriteAsJsonAsync(validationProblemDetails);

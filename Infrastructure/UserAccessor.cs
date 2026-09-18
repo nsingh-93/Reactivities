@@ -6,13 +6,14 @@ using Persistence;
 
 namespace Infrastructure;
 
-public class UserAccessor(IHttpContextAccessor httpContextAccesor, AppDbContext dbContext) : IUserAccessor
+public class UserAccessor(IHttpContextAccessor httpContextAccesor, AppDbContext dbContext)
+    : IUserAccessor
 // IHttpContextAccessor contains the HttpContext which has the User object
 {
     public async Task<User> GetUserAsync()
     {
         return await dbContext.Users.FindAsync(GetUserId())
-        ?? throw new UnauthorizedAccessException("No user is logged in");
+            ?? throw new UnauthorizedAccessException("No user is logged in");
     }
 
     public string GetUserId()
