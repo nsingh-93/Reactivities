@@ -45,14 +45,19 @@ export default function ActivityCard({ activity }: Props) {
             </>
           }
         />
-      </Box>
-      <Box display="flex" flexDirection="column" gap={2} mr={2}>
-        {(activity.isHost || activity.isGoing) && (
-          <Chip variant="outlined" label={label} color={color} sx={{ borderRadius: 2 }} />
-        )}
-        {activity.isCancelled && (
-          <Chip label="Cancelled" color="error" sx={{ borderRadius: 2 }} />
-        )}
+        <Box display="flex" flexDirection="column" gap={2} mr={2}>
+          {(activity.isHost || activity.isGoing) && (
+            <Chip
+              variant="outlined"
+              label={label}
+              color={color}
+              sx={{ borderRadius: 2 }}
+            />
+          )}
+          {activity.isCancelled && (
+            <Chip label="Cancelled" color="error" sx={{ borderRadius: 2 }} />
+          )}
+        </Box>
       </Box>
 
       <Divider sx={{ mb: 3 }} />
