@@ -1,0 +1,20 @@
+meta {
+  name: Add Photo
+  type: http
+  seq: 23
+}
+
+post {
+  url: {{url}}/api/profiles/add-photo
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  File: @file(C:\Users\neils\Desktop\Code\Reactivities\images\spiderman.jpg) @contentType(image/jpeg)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

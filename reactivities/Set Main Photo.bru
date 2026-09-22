@@ -1,0 +1,24 @@
+meta {
+  name: Set Main Photo
+  type: http
+  seq: 26
+}
+
+put {
+  url: {{url}}/api/profiles/bb289867-ae90-4a55-9172-c9e4ebb6690d/set-main
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
